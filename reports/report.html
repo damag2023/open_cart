@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>OpenCart_TestCase Execution_report</title>
+    <link href="assets/style.css" rel="stylesheet" type="text/css"/></head>
+  <body onLoad="init()">
+    <script>/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ * You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+
+function toArray(iter) {
+    if (iter === null) {
+        return null;
+    }
+    return Array.prototype.slice.call(iter);
+}
+
+function find(selector, elem) { // eslint-disable-line no-redeclare
+    if (!elem) {
+        elem = document;
+    }
+    return elem.querySelector(selector);
+}
+
+function findAll(selector, elem) {
+    if (!elem) {
+        elem = document;
+    }
+    return toArray(elem.querySelectorAll(selector));
+}
+
+function sortColumn(elem) {
+    toggleSortStates(elem);
+    const colIndex = toArray(elem.parentNode.childNodes).indexOf(elem);
+    let key;
+    if (elem.classList.contains('result')) {
+        key = keyResult;
+    } else if (elem.classList.contains('links')) {
+        key = keyLink;
+    } else {
+        key = keyAlpha;
+    }
+    sortTable(elem, key(colIndex));
+}
+
+function showAllExtras() { // eslint-disable-line no-unused-vars
+    findAll('.col-result').forEach(showExtras);
+}
+
+function hideAllExtras() { // eslint-disable-line no-unused-vars
+    findAll('.col-result').forEach(hideExtras);
+}
+
+function showExtras(colresultElem) {
+    const extras = colresultElem.parentNode.nextElementSibling;
+    const expandcollapse = colresultElem.firstElementChild;
+    extras.classList.remove('collapsed');
+    expandcollapse.classList.remove('expander');
+    expandcollapse.classList.add('collapser');
+}
+
+function hideExtras(colresultElem) {
+    const extras = colresultElem.parentNode.nextElementSibling;
+    const expandcollapse = colresultElem.firstElementChild;
+    extras.classList.add('collapsed');
+    expandcollapse.classList.remove('collapser');
+    expandcollapse.classList.add('expander');
+}
+
+function showFilters() {
+    let visibleString = getQueryParameter('visible') || 'all';
+    visibleString = visibleString.toLowerCase();
+    const checkedItems = visibleString.split(',');
+
+    const filterItems = document.getElementsByClassName('filter');
+    for (let i = 0; i < filterItems.length; i++) {
+        filterItems[i].hidden = false;
+
+        if (visibleString != 'all') {
+            filterItems[i].checked = checkedItems.includes(filterItems[i].getAttribute('data-test-result'));
+            filterTable(filterItems[i]);
+        }
+    }
+}
+
+function addCollapse() {
+    // Add links for show/hide all
+    const resulttable = find('table#results-table');
+    const showhideall = document.createElement('p');
+    showhideall.innerHTML = '<a href="javascript:showAllExtras()">Show all details</a> / ' +
+                            '<a href="javascript:hideAllExtras()">Hide all details</a>';
+    resulttable.parentElement.insertBefore(showhideall, resulttable);
+
+    // Add show/hide link to each result
+    findAll('.col-result').forEach(function(elem) {
+        const collapsed = getQueryParameter('collapsed') || 'Passed';
+        const extras = elem.parentNode.nextElementSibling;
+        const expandcollapse = document.createElement('span');
+        if (extras.classList.contains('collapsed')) {
+            expandcollapse.classList.add('expander');
+        } else if (collapsed.includes(elem.innerHTML)) {
+            extras.classList.add('collapsed');
+            expandcollapse.classList.add('expander');
+        } else {
+            expandcollapse.classList.add('collapser');
+        }
+        elem.appendChild(expandcollapse);
+
+        elem.addEventListener('click', function(event) {
+            if (event.currentTarget.parentNode.nextElementSibling.classList.contains('collapsed')) {
+                showExtras(event.currentTarget);
+            } else {
+                hideExtras(event.currentTarget);
+            }
+        });
+    });
+}
+
+function getQueryParameter(name) {
+    const match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
+
+function init () { // eslint-disable-line no-unused-vars
+    resetSortHeaders();
+
+    addCollapse();
+
+    showFilters();
+
+    sortColumn(find('.initial-sort'));
+
+    findAll('.sortable').forEach(function(elem) {
+        elem.addEventListener('click',
+            function() {
+                sortColumn(elem);
+            }, false);
+    });
+}
+
+function sortTable(clicked, keyFunc) {
+    const rows = findAll('.results-table-row');
+    const reversed = !clicked.classList.contains('asc');
+    const sortedRows = sort(rows, keyFunc, reversed);
+    /* Whole table is removed here because browsers acts much slower
+     * when appending existing elements.
+     */
+    const thead = document.getElementById('results-table-head');
+    document.getElementById('results-table').remove();
+    const parent = document.createElement('table');
+    parent.id = 'results-table';
+    parent.appendChild(thead);
+    sortedRows.forEach(function(elem) {
+        parent.appendChild(elem);
+    });
+    document.getElementsByTagName('BODY')[0].appendChild(parent);
+}
+
+function sort(items, keyFunc, reversed) {
+    const sortArray = items.map(function(item, i) {
+        return [keyFunc(item), i];
+    });
+
+    sortArray.sort(function(a, b) {
+        const keyA = a[0];
+        const keyB = b[0];
+
+        if (keyA == keyB) return 0;
+
+        if (reversed) {
+            return keyA < keyB ? 1 : -1;
+        } else {
+            return keyA > keyB ? 1 : -1;
+        }
+    });
+
+    return sortArray.map(function(item) {
+        const index = item[1];
+        return items[index];
+    });
+}
+
+function keyAlpha(colIndex) {
+    return function(elem) {
+        return elem.childNodes[1].childNodes[colIndex].firstChild.data.toLowerCase();
+    };
+}
+
+function keyLink(colIndex) {
+    return function(elem) {
+        const dataCell = elem.childNodes[1].childNodes[colIndex].firstChild;
+        return dataCell == null ? '' : dataCell.innerText.toLowerCase();
+    };
+}
+
+function keyResult(colIndex) {
+    return function(elem) {
+        const strings = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed',
+            'Skipped', 'Passed'];
+        return strings.indexOf(elem.childNodes[1].childNodes[colIndex].firstChild.data);
+    };
+}
+
+function resetSortHeaders() {
+    findAll('.sort-icon').forEach(function(elem) {
+        elem.parentNode.removeChild(elem);
+    });
+    findAll('.sortable').forEach(function(elem) {
+        const icon = document.createElement('div');
+        icon.className = 'sort-icon';
+        icon.textContent = 'vvv';
+        elem.insertBefore(icon, elem.firstChild);
+        elem.classList.remove('desc', 'active');
+        elem.classList.add('asc', 'inactive');
+    });
+}
+
+function toggleSortStates(elem) {
+    //if active, toggle between asc and desc
+    if (elem.classList.contains('active')) {
+        elem.classList.toggle('asc');
+        elem.classList.toggle('desc');
+    }
+
+    //if inactive, reset all other functions and add ascending active
+    if (elem.classList.contains('inactive')) {
+        resetSortHeaders();
+        elem.classList.remove('inactive');
+        elem.classList.add('active');
+    }
+}
+
+function isAllRowsHidden(value) {
+    return value.hidden == false;
+}
+
+function filterTable(elem) { // eslint-disable-line no-unused-vars
+    const outcomeAtt = 'data-test-result';
+    const outcome = elem.getAttribute(outcomeAtt);
+    const classOutcome = outcome + ' results-table-row';
+    const outcomeRows = document.getElementsByClassName(classOutcome);
+
+    for(let i = 0; i < outcomeRows.length; i++){
+        outcomeRows[i].hidden = !elem.checked;
+    }
+
+    const rows = findAll('.results-table-row').filter(isAllRowsHidden);
+    const allRowsHidden = rows.length == 0 ? true : false;
+    const notFoundMessage = document.getElementById('not-found-message');
+    notFoundMessage.hidden = !allRowsHidden;
+}
+</script>
+    <h1>OpenCart_TestCase Execution_report</h1>
+    <p>Report generated on 08-Aug-2023 at 13:13:57 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
+    <h2>Summary</h2>
+    <p>5 tests ran in 48.08 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">2 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">3 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <h2>Results</h2>
+    <table id="results-table">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable result initial-sort" col="result">Result</th>
+          <th class="sortable" col="name">Test</th>
+          <th class="sortable" col="duration">Duration</th>
+          <th class="sortable links" col="links">Links</th></tr>
+        <tr hidden="true" id="not-found-message">
+          <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">testCases/test_login_TC_LF_001.py::TestLogin::test_TC_LF_001</td>
+          <td class="col-duration">6.90</td>
+          <td class="col-links"><a class="url" href="https://opencart.antropy.co.uk/index.php?route=account/login" target="_blank">URL</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div><div><img src="testCases/test_login_TC_LF_001.py_TestLogin_test_TC_LF_001.png" alt="screenshot" style="width:304px;height:228px;" onclick="window.open(this.src)" align="right"/></div></div>
+            <div class="log">self = &lt;testCases.test_login_TC_LF_001.TestLogin object at 0x0000025C35A7F050&gt;<br/><br/>    def test_TC_LF_001(self):<br/>        &quot;&quot;&quot;this test case validates logging into the Application using valid credentials&quot;&quot;&quot;<br/>        log = LogGen.getLogger()<br/>        log.info(&quot;Navigate to the login page&quot;)<br/>        self.driver.get(ReadConfig.get_url())<br/>        homepage = Homepage(self.driver)<br/>        homepage.get_myaccount().click()<br/>        loginpage = homepage.get_login()<br/>        loginpage.get_email_element().send_keys(&quot;daveshawn@gmail.com&quot;)<br/>        loginpage.get_password_element().send_keys(ReadConfig.get_password())<br/>        myAccountPage= loginpage.click_submit()<br/>        if self.driver.title == &quot;My Account&quot;:<br/>            log.info(&quot;Log in successful&quot;)<br/>            assert True<br/>        else:<br/>            log.error(&quot;log in not successful&quot;)<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\open_cart\testCases\test_login_TC_LF_001.py:27: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     test_TC_LF_001:test_login_TC_LF_001.py:14 Navigate to the login page
+ERROR    test_TC_LF_001:test_login_TC_LF_001.py:26 log in not successful<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">testCases/test_registration_TC_RF_001.py::TestRegistration::test_TC_RF_001</td>
+          <td class="col-duration">17.11</td>
+          <td class="col-links"><a class="url" href="https://opencart.antropy.co.uk/index.php?route=account/register" target="_blank">URL</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div><div><img src="testCases/test_registration_TC_RF_001.py_TestRegistration_test_TC_RF_001.png" alt="screenshot" style="width:304px;height:228px;" onclick="window.open(this.src)" align="right"/></div></div>
+            <div class="log">self = &lt;testCases.test_registration_TC_RF_001.TestRegistration object at 0x0000025C35ABC510&gt;<br/><br/>    def test_TC_RF_001(self):<br/>        &quot;&quot;&quot;This test case validates a user is able to register a new account.&quot;&quot;&quot;<br/>        log =LogGen.getLogger()<br/>        log.debug(&quot; Open the browser&quot;)<br/>        self.driver.get(&quot;https://opencart.antropy.co.uk/index.php?route=common/home&quot;)<br/>        log.info(&quot;Navigated to the homepage&quot;)<br/>        homepage = Homepage(self.driver)<br/>        homepage.get_myaccount().click()<br/>        registration = homepage.get_register()<br/>        log.info(&quot;Navigated to the account registration page&quot;)<br/>        registration.get_firstName_element().send_keys(&quot;Dave&quot;)<br/>        registration.get_lastName_element().send_keys(&quot;Thomas&quot;)<br/>        registration.get_telephone_element().send_keys(&quot;457-895-8965&quot;)<br/>        registration.get_email_element().send_keys(&quot;&quot;)<br/>        registration.get_firstPassword_element().send_keys(&quot;Password#1&quot;)<br/>        registration.get_confirmPassword_element().send_keys(&quot;Password#1&quot;)<br/>    <br/>        time.sleep(10)<br/>        registration.get_agreeterms_element().click()<br/>        registration.get_continuebutton_element().click()<br/>        confirmation_msg = &quot;Your Account Has Been Created!&quot;<br/>        if confirmation_msg == registration.get_confirmation_text_element().text:<br/>            log.debug(&quot;Registered ned user successfully&quot;)<br/>            assert True<br/>            registration.get_continue_homepage_element().click()<br/>        else:<br/>            log.error(&quot;Unable to register the account&quot;)<br/>            self.driver.save_screenshot(os.path.dirname(os.getcwd()) + &quot;\\screenshots&quot;<br/>                                                                       &quot;\\test_register.png&quot;)<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\open_cart\testCases\test_registration_TC_RF_001.py:41: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>DEBUG    test_TC_RF_001:test_registration_TC_RF_001.py:15  Open the browser
+INFO     test_TC_RF_001:test_registration_TC_RF_001.py:17 Navigated to the homepage
+INFO     test_TC_RF_001:test_registration_TC_RF_001.py:21 Navigated to the account registration page
+ERROR    test_TC_RF_001:test_registration_TC_RF_001.py:38 Unable to register the account<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">testCases/test_registration_TC_RF_008.py::Test_TC_RF_008::test_TC_RF_008</td>
+          <td class="col-duration">8.12</td>
+          <td class="col-links"><a class="url" href="https://opencart.antropy.co.uk/index.php?route=account/register" target="_blank">URL</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div><div><img src="testCases/test_registration_TC_RF_008.py_Test_TC_RF_008_test_TC_RF_008.png" alt="screenshot" style="width:304px;height:228px;" onclick="window.open(this.src)" align="right"/></div></div>
+            <div class="log">self = &lt;testCases.test_registration_TC_RF_008.Test_TC_RF_008 object at 0x0000025C35ABE0D0&gt;<br/><br/>    def test_TC_RF_008(self):<br/>        &quot;&quot;&quot;This test case validates that the user is unable to register an account when the password doesnt match the<br/>        confirmation password&quot;&quot;&quot;<br/>        log =LogGen.getLogger()<br/>        log.debug(&quot; Open the browser&quot;)<br/>        self.driver.get(&quot;https://opencart.antropy.co.uk/index.php?route=common/home&quot;)<br/>        log.debug(&quot;Navigated to the homepage&quot;)<br/>        homepage = Homepage(self.driver)<br/>        homepage.get_myaccount().click()<br/>        registration = homepage.get_register()<br/>        log.debug(&quot;Navigated to the account registration page&quot;)<br/>        registration.get_firstName_element().send_keys(&quot;Dave&quot;)<br/>        registration.get_lastName_element().send_keys(&quot;Thomas&quot;)<br/>        registration.get_telephone_element().send_keys(&quot;457-895-8965&quot;)<br/>        registration.get_email_element().send_keys(&quot;afhlks@gmail.com&quot;)<br/>    <br/>        registration.get_firstPassword_element().send_keys(&quot;Password#1&quot;)<br/>        registration.get_confirmPassword_element().send_keys(&quot;Password#2&quot;)<br/>        log.info(&quot;Provided password that doesnt match&quot;)<br/>        registration.get_continuebutton_element().click()<br/>        if registration.get_passwordMismatchError_element() == &quot;Password confirmation does not match password!&quot;:<br/>            log.info(&quot;Password mismatch error message displayed&quot;)<br/>            assert True<br/>        else:<br/>            log.error(&quot;Password mismatch error message nto displayed&quot;)<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\open_cart\testCases\test_registration_TC_RF_008.py:33: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>DEBUG    test_TC_RF_008:test_registration_TC_RF_008.py:12  Open the browser
+DEBUG    test_TC_RF_008:test_registration_TC_RF_008.py:14 Navigated to the homepage
+DEBUG    test_TC_RF_008:test_registration_TC_RF_008.py:18 Navigated to the account registration page
+INFO     test_TC_RF_008:test_registration_TC_RF_008.py:26 Provided password that doesnt match
+ERROR    test_TC_RF_008:test_registration_TC_RF_008.py:32 Password mismatch error message nto displayed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">testCases/test_login_TC_LF_002.py::TestLogin::test_TC_LF_002</td>
+          <td class="col-duration">6.63</td>
+          <td class="col-links"><a class="url" href="https://opencart.antropy.co.uk/index.php?route=account/login" target="_blank">URL</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     test_TC_LF_002:test_login_TC_LF_002.py:14 Navigate to the login page
+INFO     test_TC_LF_002:test_login_TC_LF_002.py:23 login error message displayed as expected<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">testCases/test_registration_TC_RF_004.py::Test_TC_RF_004::test_TC_RF_004</td>
+          <td class="col-duration">8.48</td>
+          <td class="col-links"><a class="url" href="https://opencart.antropy.co.uk/index.php?route=account/register" target="_blank">URL</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Blank last name
+Terms box not checked
+<br/> -------------------------------Captured log call-------------------------------- <br/>DEBUG    test_TC_RF_004:test_registration_TC_RF_004.py:13  Open the browser
+DEBUG    test_TC_RF_004:test_registration_TC_RF_004.py:15 Navigated to the homepage
+INFO     test_TC_RF_004:test_registration_TC_RF_004.py:20 Navigated to the account registration page
+INFO     test_TC_RF_004:test_registration_TC_RF_004.py:23 Blank first name
+INFO     test_TC_RF_004:test_registration_TC_RF_004.py:25 Error message displayed<br/></div></td></tr></tbody></table></body></html>

@@ -1,0 +1,299 @@
+1691522201967	geckodriver	INFO	Listening on 127.0.0.1:56008
+1691522249473	geckodriver	INFO	Listening on 127.0.0.1:56048
+1691523099677	geckodriver	INFO	Listening on 127.0.0.1:58080
+1691523102783	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58081" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\dines\\AppData\\Local\\Temp\\rust_mozprofilezPvesR"
+JavaScript error: jl3ccgguhjb.cfg, line 2: ReferenceError: Components is not defined
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1691523105316	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1691523105602	Marionette	INFO	Listening on port 58107
+Read port: 58107
+WebDriver BiDi listening on ws://127.0.0.1:58081
+1691523106400	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:58081/devtools/browser/71e18163-a921-4641-9ccb-50ea7f4880c8
+1691523141389	Marionette	INFO	Stopped listening on port 58107
+Dynamically enable window occlusion 1
+[Parent 4060, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 18404, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+console.error: (new Error("Data is not ready.", "resource://gre/modules/JSONFile.sys.mjs", 180))
+[Parent 4060, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 18404, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+[Parent 4060, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 18404, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+[Parent 4060, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 18404, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+[Parent 4060, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 18404, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+1691523157971	geckodriver	INFO	Listening on 127.0.0.1:58246
+1691523161045	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58247" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\dines\\AppData\\Local\\Temp\\rust_mozprofile7HMIH2"
+JavaScript error: jl3ccgguhjb.cfg, line 2: ReferenceError: Components is not defined
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1691523161410	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1691523161490	Marionette	INFO	Listening on port 58256
+WebDriver BiDi listening on ws://127.0.0.1:58247
+Read port: 58256
+1691523162635	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:58247/devtools/browser/a7061cde-f7e4-45c4-ad43-98ad1cded5d7
+[Parent 18016, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 15372, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+JavaScript error: https://sibautomation.com/sa.js?key=wy1r3ztx83xyq8wzpzejt, line 189: TypeError: document.body is null
+JavaScript warning: https://script.hotjar.com/modules.92ff9978854791af68a7.js, line 2: Script terminated by timeout at:
+i@https://script.hotjar.com/modules.92ff9978854791af68a7.js:2:37441
+d/</<@https://script.hotjar.com/modules.92ff9978854791af68a7.js:2:37611
+d/<@https://script.hotjar.com/modules.92ff9978854791af68a7.js:2:37817
+
+1691523204717	Marionette	INFO	Stopped listening on port 58256
+Dynamically enable window occlusion 1
+[Parent 18016, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 15372, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+[Parent 18016, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 15372, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+[Parent 18016, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 15372, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+[Parent 18016, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 15372, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+[Parent 18016, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 15372, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+1691523206011	geckodriver	INFO	Listening on 127.0.0.1:58404
+1691523208995	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58405" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\dines\\AppData\\Local\\Temp\\rust_mozprofile96Xe3d"
+JavaScript error: jl3ccgguhjb.cfg, line 2: ReferenceError: Components is not defined
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1691523209363	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1691523209444	Marionette	INFO	Listening on port 58415
+WebDriver BiDi listening on ws://127.0.0.1:58405
+Read port: 58415
+1691523210960	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:58405/devtools/browser/e76dc920-e5d2-490e-88c8-cfec6e2e1edf
+JavaScript error: https://sibautomation.com/sa.js?key=wy1r3ztx83xyq8wzpzejt, line 27: TypeError: document.body is null
+[Parent 19432, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 18312, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=G-8YL8HD3MWJ, line 109: Script terminated by timeout at:
+Ra@https://www.googletagmanager.com/gtag/js?id=G-8YL8HD3MWJ:109:437
+Qp@https://www.googletagmanager.com/gtag/js?id=G-8YL8HD3MWJ:316:519
+Fv@https://www.googletagmanager.com/gtag/js?id=G-8YL8HD3MWJ:347:689
+QE/<@https://www.googletagmanager.com/gtag/js?id=G-8YL8HD3MWJ:453:153
+aa.Ak/<@https://www.googletagmanager.com/gtag/js?id=G-8YL8HD3MWJ:405:126
+aa.Ak/c/<@https://www.googletagmanager.com/gtag/js?id=G-8YL8HD3MWJ:404:420
+
+1691523360981	Marionette	INFO	Stopped listening on port 58415
+Dynamically enable window occlusion 1
+[Parent 19432, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 18312, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+[Parent 19432, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 18312, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+[Parent 19432, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 18312, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+[Parent 19432, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 18312, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+[Parent 19432, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 18312, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+1691523378727	geckodriver	INFO	Listening on 127.0.0.1:58625
+1691523649625	geckodriver	INFO	Listening on 127.0.0.1:58880
+1691523652691	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58881" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\dines\\AppData\\Local\\Temp\\rust_mozprofilerYr5vY"
+JavaScript error: jl3ccgguhjb.cfg, line 2: ReferenceError: Components is not defined
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1691523653052	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1691523653132	Marionette	INFO	Listening on port 58890
+WebDriver BiDi listening on ws://127.0.0.1:58881
+Read port: 58890
+1691523654670	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:58881/devtools/browser/3c06fa52-0433-4174-be05-d429977e79c8
+JavaScript error: https://sibautomation.com/sa.js?key=wy1r3ztx83xyq8wzpzejt, line 27: TypeError: document.body is null
+[Parent 18524, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 18468, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.google.com."
+JavaScript warning: https://www.youtube.com/s/player/f98908d1/player_ias.vflset/en_US/base.js, line 163: Script terminated by timeout at:
+g.Ra@https://www.youtube.com/s/player/f98908d1/player_ias.vflset/en_US/base.js:163:127
+Mra@https://www.youtube.com/s/player/f98908d1/player_ias.vflset/en_US/base.js:2567:43
+gH@https://www.youtube.com/s/player/f98908d1/player_ias.vflset/en_US/base.js:2560:55
+jH@https://www.youtube.com/s/player/f98908d1/player_ias.vflset/en_US/base.js:2563:18
+XH/<@https://www.youtube.com/s/player/f98908d1/player_ias.vflset/en_US/base.js:2648:49
+g.Wz/<@https://www.youtube.com/s/player/f98908d1/player_ias.vflset/en_US/base.js:1877:65
+XH@https://www.youtube.com/s/player/f98908d1/player_ias.vflset/en_US/base.js:2648:68
+g.k.rQ@https://www.youtube.com/s/player/f98908d1/player_ias.vflset/en_US/base.js:11664:64
+g.k.sendAbandonmentPing@https://www.youtube.com/s/player/f98908d1/player_ias.vflset/en_US/base.js:11561:102
+g.k.sendAbandonmentPing@https://www.youtube.com/s/player/f98908d1/player_ias.vflset/en_US/base.js:9780:62
+xS/a.state.j[b]@https://www.youtube.com/s/player/f98908d1/player_ias.vflset/en_US/base.js:4303:53
+Kw/<@https://www.youtube.com/s/player/f98908d1/www-embed-player.vflset/www-embed-player.js:1782:106
+Ww@https://www.youtube.com/s/player/f98908d1/www-embed-player.vflset/www-embed-player.js:1818:46
+$w<@https://www.youtube.com/s/player/f98908d1/www-embed-player.vflset/www-embed-player.js:1825:183
+Hk/<@https://www.youtube.com/s/player/f98908d1/www-embed-player.vflset/www-embed-player.js:844:63
+
+[Parent 18524, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 18468, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+JavaScript warning: https://www.google.com/xjs/_/js/k=xjs.s.en_US.yLlV4pEtwek.O/am=CgggIAAAAAACABD1hEMAG0AA_tkZAAAgCIACAAAAAHAVAYABgOD9J2kAAAQIAWEAYvAGACWUgB0AAADGfgAAAAAAiANgvAAIhQBwIARUAAEAAACQBwDnAYKDCQsAAAAAAAAAAAAg4BIEgwPSYwEBEAAAAAAAAAAAACCVTF4eAAEAwA/d=1/ed=1/dg=2/rs=ACT90oHGajo7ryu4ICuRs-YKt78ihr1W-Q/ee=cEt90b:ws9Tlc;qddgKe:x4FYXe,d7YSfd;yxTchf:KUM7Z;dtl0hd:lLQWFe;eHDfl:ofjVkb;qaS3gd:yiLg6e;nAFL3:NTMZac,s39S4;oGtAuc:sOXFj;iFQyKf:vfuNJf,QIhFr;SNUn3:ZwDk9d,x8cHvb;io8t5d:sgY6Zb;Oj465e:KG2eXe,KG2eXe;Erl4fe:FloWmf,FloWmf;JsbNhc:Xd8iUd;sP4Vbe:VwDzFe;kMFpHd:OTA3Ae;uY49fb:COQbmf;Pjplud:PoEs9b,EEDORb;QGR0gd:Mlhmy;a56pNe:JEfCwb;Me32dd:MEeYgc;wR5FRb:TtcOte,O1Gjze;pXdRYb:JKoKVe,MdUzUe;dIoSBb:ZgGg9b;EmZ2Bf:zr1jrb;NSEoX:lazG7b;eBAeSb:Ck63tb;WCEKNd:I46Hvd;wV5Pjc:L8KGxe;EVNhjf:pw70Gc;sTsDMc:kHVSUb;wQlYve:aLUfP;zOsCQe:Ko78Df;KcokUb:KiuZBf;YV5bee:IvPZ6d;kbAm9d:MkHyGd;ZWEUA:afR4Cf;g8nkx:U4MzKc;lzgfYb:PI40bd;ESrPQc:mNTJvc;qavrXe:zQzcXe,mYbt1d;w9w86d:dt4g2b;GleZL:J1A7Od;bcPXSc:gSZLJb;JXS8fb:Qj0suc;IoGlCf:b5lhvb;vfVwPd:OXTqFb;VGRfx:VFqbr;BjwMce:cXX2Wb;pNsl2d:j9Yuyc;R9Ulx:CR7Ufe;kY7VAf:d91TEb;KpRAue:Tia57b;jY0zg:Q6tNgc;l8Azde:j4Ca9b;oSUNyd:fTfGO,fTfGO,vjQg0b;SMDL4c:fTfGO,vjQg0b;aZ61od:arTwJ;ZrFutb:W4Cdfc;K8vqCc:MyIcle;NPKaK:SdcwHb;LBgRLc:XVMNvd,SdcwHb;rQSrae:C6D5Fc;kCQyJ:ueyPK;KQzWid:mB4wNe;EABSZ:MXZt9d;TxfV6d:YORN0b;UDrY1c:eps46d;F9mqte:UoRcbe;Nyt6ic:jn2sGd;w3bZCb:ZPGaIb;G0KhTb:LIaoZ;aAJE9c:WHW6Ef;V2HTTe:RolTY;Wfmdue:g3MJlb;imqimf:jKGL2e;BgS6mb:fidj5d;UVmjEd:EesRsb;z97YGf:oug9te;AfeaP:TkrAjf;eBZ5Nd:audvde;CxXAWb:YyRLvc;VN6jIc:ddQyuf;SLtqO:Kh1xYe;tosKvd:ZCqP3;VOcgDe:YquhTb;uuQkY:u2V3ud;WDGyFe:jcVOxd;trZL0b:qY8PFe;VxQ32b:k0XsBb;DULqB:RKfG5c;Np8Qkd:Dpx6qc;cFTWae:gT8qnd;gaub4:TN6bMe;xBbsrc:NEW1Qc;DpcR3d:zL72xf;hjRo6e:F62sG;yGxLoc:FmAr0c;oUlnpc:RagDlc;R2kc8b:ALJqWb;pj82le:mg5CW;dLlj2:Qqt3Gf;qGV2uc:HHi04c;gtVSi:ekUOYd;UyG7Kb:wQd0G;LsNahb:ucGLNb;xbe2wc:uRMPBc;Q1Ow7b:x5CSu;okUaUd:wItadb;G6wU6e:hezEbd;uknmt:GkPrzb;PqHfGe:im2cZe;Fmv9Nc:O1Tzwc;hK67qb:QWEO5b;BMxAGc:E5bFse;R4IIIb:QWfeKf;whEZac:F4AmNb;tH4IIe:Ymry6;zxnPse:GkRiKb;xqZiqf:wmnU7d;lkq0A:Z0MWEf;daB6be:lMxGPd;U96pRd:FsR04;LEikZe:byfTOb,lsjVmc/m=attn,cdos,cr,gwc,hsm,jsa,mb4ZUb,d,csi,cEt90b,SNUn3,qddgKe,sTsDMc,dtl0hd,eHDfl, line 415: Script terminated by timeout at:
+b@https://www.google.com/xjs/_/js/k=xjs.s.en_US.yLlV4pEtwek.O/am=CgggIAAAAAACABD1hEMAG0AA_tkZAAAgCIACAAAAAHAVAYABgOD9J2kAAAQIAWEAYvAGACWUgB0AAADGfgAAAAAAiANgvAAIhQBwIARUAAEAAACQBwDnAYKDCQsAAAAAAAAAAAAg4BIEgwPSYwEBEAAAAAAAAAAAACCVTF4eAAEAwA/d=1/ed=1/dg=2/rs=ACT90oHGajo7ryu4ICuRs-YKt78ihr1W-Q/ee=cEt90b:ws9Tlc;qddgKe:x4FYXe,d7YSfd;yxTchf:KUM7Z;dtl0hd:lLQWFe;eHDfl:ofjVkb;qaS3gd:yiLg6e;nAFL3:NTMZac,s39S4;oGtAuc:sOXFj;iFQyKf:vfuNJf,QIhFr;SNUn3:ZwDk9d,x8cHvb;io8t5d:sgY6Zb;Oj465e:KG2eXe,KG2eXe;Erl4fe:FloWmf,FloWmf;JsbNhc:Xd8iUd;sP4Vbe:VwDzFe;kMFpHd:OTA3Ae;uY49fb:COQbmf;Pjplud:PoEs9b,EEDORb;QGR0gd:Mlhmy;a56pNe:JEfCwb;Me32dd:MEeYgc;wR5FRb:TtcOte,O1Gjze;pXdRYb:JKoKVe,MdUzUe;dIoSBb:ZgGg9b;EmZ2Bf:zr1jrb;NSEoX:lazG7b;eBAeSb:Ck63tb;WCEKNd:I46Hvd;wV5Pjc:L8KGxe;EVNhjf:pw70Gc;sTsDMc:kHVSUb;wQlYve:aLUfP;zOsCQe:Ko78Df;KcokUb:KiuZBf;YV5bee:IvPZ6d;kbAm9d:MkHyGd;ZWEUA:afR4Cf;g8nkx:U4MzKc;lzgfYb:PI40bd;ESrPQc:mNTJvc;qavrXe:zQzcXe,mYbt1d;w9w86d:dt4g2b;GleZL:J1A7Od;bcPXSc:gSZLJb;JXS8fb:Qj0suc;IoGlCf:b5lhvb;vfVwPd:OXTqFb;VGRfx:VFqbr;BjwMce:cXX2Wb;pNsl2d:j9Yuyc;R9Ulx:CR7Ufe;kY7VAf:d91TEb;KpRAue:Tia57b;jY0zg:Q6tNgc;l8Azde:j4Ca9b;oSUNyd:fTfGO,fTfGO,vjQg0b;SMDL4c:fTfGO,vjQg0b;aZ61od:arTwJ;ZrFutb:W4Cdfc;K8vqCc:MyIcle;NPKaK:SdcwHb;LBgRLc:XVMNvd,SdcwHb;rQSrae:C6D5Fc;kCQyJ:ueyPK;KQzWid:mB4wNe;EABSZ:MXZt9d;TxfV6d:YORN0b;UDrY1c:eps46d;F9mqte:UoRcbe;Nyt6ic:jn2sGd;w3bZCb:ZPGaIb;G0KhTb:LIaoZ;aAJE9c:WHW6Ef;V2HTTe:RolTY;Wfmdue:g3MJlb;imqimf:jKGL2e;BgS6mb:fidj5d;UVmjEd:EesRsb;z97YGf:oug9te;AfeaP:TkrAjf;eBZ5Nd:audvde;CxXAWb:YyRLvc;VN6jIc:ddQyuf;SLtqO:Kh1xYe;tosKvd:ZCqP3;VOcgDe:YquhTb;uuQkY:u2V3ud;WDGyFe:jcVOxd;trZL0b:qY8PFe;VxQ32b:k0XsBb;DULqB:RKfG5c;Np8Qkd:Dpx6qc;cFTWae:gT8qnd;gaub4:TN6bMe;xBbsrc:NEW1Qc;DpcR3d:zL72xf;hjRo6e:F62sG;yGxLoc:FmAr0c;oUlnpc:RagDlc;R2kc8b:ALJqWb;pj82le:mg5CW;dLlj2:Qqt3Gf;qGV2uc:HHi04c;gtVSi:ekUOYd;UyG7Kb:wQd0G;LsNahb:ucGLNb;xbe2wc:uRMPBc;Q1Ow7b:x5CSu;okUaUd:wItadb;G6wU6e:hezEbd;uknmt:GkPrzb;PqHfGe:im2cZe;Fmv9Nc:O1Tzwc;hK67qb:QWEO5b;BMxAGc:E5bFse;R4IIIb:QWfeKf;whEZac:F4AmNb;tH4IIe:Ymry6;zxnPse:GkRiKb;xqZiqf:wmnU7d;lkq0A:Z0MWEf;daB6be:lMxGPd;U96pRd:FsR04;LEikZe:byfTOb,lsjVmc/m=attn,cdos,cr,gwc,hsm,jsa,mb4ZUb,d,csi,cEt90b,SNUn3,qddgKe,sTsDMc,dtl0hd,eHDfl:415:40
+
+[Parent 18524, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 18468, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+[Parent 18524, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 18468, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+JavaScript warning: https://pagead2.googlesyndication.com/bg/0Hra_cK1xmatTaZ7_Fox9IQH0EoW0oMPpjwxxKW34xk.js line 2 > eval line 7518 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=G-WCZ03SZFCQ, line 491: Script terminated by timeout at:
+get@https://www.googletagmanager.com/gtag/js?id=G-WCZ03SZFCQ:491:115
+stop@https://www.googletagmanager.com/gtag/js?id=G-WCZ03SZFCQ:491:87
+aa.Ak/c/<@https://www.googletagmanager.com/gtag/js?id=G-WCZ03SZFCQ:491:412
+
+1691601141644	Marionette	INFO	Stopped listening on port 58890
+Dynamically enable window occlusion 1
+[Parent 18524, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 18468, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+[Parent 18524, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 18468, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+[Parent 18524, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 18468, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+[Parent 18524, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 18468, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+[Parent 18524, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 18468, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+[Parent 18524, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 18468, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+[Parent 18524, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 18468, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+lose to false
+1691524258804	RemoteAgent	DEBUG	Setting recommended pref browser.tabs.warnOnCloseOtherTabs to false
+1691524258804	RemoteAgent	DEBUG	Setting recommended pref browser.tabs.warnOnOpen to false
+1691524258804	RemoteAgent	DEBUG	Setting recommended pref browser.toolbars.bookmarks.visibility to never
+1691524258804	RemoteAgent	DEBUG	Setting recommended pref browser.topsites.contile.enabled to false
+1691524258804	RemoteAgent	DEBUG	Setting recommended pref browser.usedOnWindows10.introURL to 
+1691524258804	RemoteAgent	DEBUG	Setting recommended pref browser.urlbar.merino.endpointURL to 
+1691524258804	RemoteAgent	DEBUG	Setting recommended pref browser.urlbar.suggest.searches to false
+1691524258804	RemoteAgent	DEBUG	Setting recommended pref datareporting.policy.dataSubmissionPolicyAccepted to false
+1691524258804	RemoteAgent	DEBUG	Setting recommended pref dom.disable_open_during_load to false
+1691524258804	RemoteAgent	DEBUG	Setting recommended pref dom.file.createInChild to true
+1691524258804	RemoteAgent	DEBUG	Setting recommended pref dom.max_chrome_script_run_time to 0
+1691524258805	RemoteAgent	DEBUG	Setting recommended pref dom.max_script_run_time to 0
+1691524258805	RemoteAgent	DEBUG	Setting recommended pref dom.navigation.locationChangeRateLimit.count to 0
+1691524258805	RemoteAgent	DEBUG	Setting recommended pref dom.push.connection.enabled to false
+1691524258805	RemoteAgent	DEBUG	Setting recommended pref dom.screenorientation.allow-lock to true
+1691524258805	RemoteAgent	DEBUG	Setting recommended pref dom.successive_dialog_time_limit to 0
+1691524258805	RemoteAgent	DEBUG	Setting recommended pref extensions.getAddons.cache.enabled to false
+1691524258805	RemoteAgent	DEBUG	Setting recommended pref extensions.getAddons.discovery.api_url to data:, 
+1691524258805	RemoteAgent	DEBUG	Setting recommended pref network.http.phishy-userpass-length to 255
+1691524258805	RemoteAgent	DEBUG	Setting recommended pref network.http.prompt-temp-redirect to false
+1691524258805	RemoteAgent	DEBUG	Setting recommended pref privacy.trackingprotection.enabled to false
+1691524258805	RemoteAgent	DEBUG	Setting recommended pref security.fileuri.strict_origin_policy to false
+1691524258805	RemoteAgent	DEBUG	Setting recommended pref security.notification_enable_delay to 0
+1691524258805	RemoteAgent	DEBUG	Setting recommended pref signon.autofillForms to false
+1691524258805	RemoteAgent	DEBUG	Setting recommended pref signon.rememberSignons to false
+1691524258805	RemoteAgent	DEBUG	Setting recommended pref widget.windows.window_occlusion_tracking.enabled to false
+Dynamically enable window occlusion 0
+1691524258805	RemoteAgent	DEBUG	Setting recommended pref dom.disable_beforeunload to true
+1691524258807	Marionette	TRACE	Received observer notification final-ui-startup
+1691524258808	RemoteAgent	TRACE	Received observer notification final-ui-startup
+1691524258866	geckodriver::browser	TRACE	Failed to open C:\Users\dines\AppData\Local\Temp\rust_mozprofileSTOAY4\MarionetteActivePort
+1691524258866	geckodriver::marionette	TRACE	Retrying in 100ms
+1691524258882	Marionette	INFO	Listening on port 59491
+1691524258884	Marionette	DEBUG	Marionette is listening
+1691524258890	RemoteAgent	TRACE	Available local IP addresses: 127.0.0.1, [::1]
+WebDriver BiDi listening on ws://127.0.0.1:59482
+1691524258899	RemoteAgent	DEBUG	Setting recommended pref browser.contentblocking.features.standard to -tp,tpPrivate,cookieBehavior0,-cm,-fp
+1691524258899	RemoteAgent	DEBUG	Setting recommended pref network.cookie.cookieBehavior to 0
+1691524258899	CDP	DEBUG	Waiting for initial application window
+Read port: 59491
+1691524259447	Marionette	DEBUG	Accepted connection 0 from 127.0.0.1:59494
+1691524259452	geckodriver::marionette	DEBUG	Connection to Marionette established on 127.0.0.1:59491.
+1691524260238	Marionette	DEBUG	0 -> [0,1,"WebDriver:NewSession",{"acceptInsecureCerts":true,"browserName":"firefox","pageLoadStrategy":"normal"}]
+1691524260244	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1691524260245	Marionette	DEBUG	Waiting for initial application window
+1691524263215	Marionette	TRACE	Received observer notification browser-idle-startup-tasks-finished
+1691524263215	RemoteAgent	TRACE	Received observer notification browser-idle-startup-tasks-finished
+1691524263224	RemoteAgent	TRACE	[8] ProgressListener Start: expectNavigation=false resolveWhenStarted=false unloadTimeout=5000 waitForExplicitStart=false
+1691524263224	RemoteAgent	TRACE	[8] ProgressListener Setting unload timer (5000ms)
+1691524263224	RemoteAgent	TRACE	[8] Document already finished loading: about:blank
+1691524263224	RemoteAgent	TRACE	[8] ProgressListener Stop: has error=false
+DevTools listening on ws://127.0.0.1:59482/devtools/browser/d82c05c0-2a50-4f45-ab78-6ec4e711a8a3
+1691524263235	Marionette	DEBUG	0 <- [1,1,null,{"sessionId":"b0d93ee3-608f-4cfa-9b12-a3e1b569db77","capabilities":{"browserName":"firefox","browserVersion":"116.0.1","platformName":"windows","acceptInsecureCerts":true,"pageLoadStrategy":"normal","setWindowRect":true,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"strictFileInteractability":false,"unhandledPromptBehavior":"dismiss and notify","moz:accessibilityChecks":false,"moz:buildID":"20230803114611","moz:debuggerAddress":"127.0.0.1:59482","moz:headless":false,"moz:platformVersion":"10.0","moz:processID":13924,"moz:profile":"C:\\Users\\dines\\AppData\\Local\\Temp\\rust_mozprofileSTOAY4","moz:shutdownTimeout":60000,"moz:webdriverClick":true,"moz:windowless":false,"proxy":{}}}]
+1691524263246	webdriver::server	DEBUG	<- 200 OK {"value":{"sessionId":"b0d93ee3-608f-4cfa-9b12-a3e1b569db77","capabilities":{"acceptInsecureCerts":true,"browserNam ... ctability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify"}}}
+1691524263249	webdriver::server	DEBUG	-> POST /session/b0d93ee3-608f-4cfa-9b12-a3e1b569db77/window/maximize {}
+1691524263278	Marionette	DEBUG	0 -> [0,2,"WebDriver:MaximizeWindow",{}]
+1691524263547	Marionette	DEBUG	0 <- [1,2,null,{"x":-8,"y":-8,"width":1936,"height":1066}]
+1691524263989	webdriver::server	DEBUG	<- 200 OK {"value":{"x":-8,"y":-8,"width":1936,"height":1066}}
+1691524263991	webdriver::server	DEBUG	-> POST /session/b0d93ee3-608f-4cfa-9b12-a3e1b569db77/url {"url": "https://leocode.com/development/how-to-setup-browsers-for-automation-with-selenium-and-python/"}
+1691524263992	Marionette	DEBUG	0 -> [0,3,"WebDriver:Navigate",{"url":"https://leocode.com/development/how-to-setup-browsers-for-automation-with-selenium-and-python/"}]
+1691524264000	Marionette	TRACE	[8] Received event beforeunload for about:blank
+1691524267124	Marionette	TRACE	Remoteness change detected. Set new top-level browsing context to 11
+1691524267138	Marionette	TRACE	[11] Received event beforeunload for about:blank
+1691524267141	Marionette	TRACE	[11] Received event pagehide for about:blank
+JavaScript error: https://sibautomation.com/sa.js?key=wy1r3ztx83xyq8wzpzejt, line 27: TypeError: document.body is null
+[Parent 13924, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 7584, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+1691524269262	Marionette	TRACE	[11] Received event DOMContentLoaded for https://leocode.com/development/how-to-setup-browsers-for-automation-with-selenium-and-python/
+1691524272090	Marionette	TRACE	[11] Received event pageshow for https://leocode.com/development/how-to-setup-browsers-for-automation-with-selenium-and-python/
+1691524272090	Marionette	DEBUG	0 <- [1,3,null,{"value":null}]
+1691524272093	webdriver::server	DEBUG	<- 200 OK {"value":null}
+1691524274095	webdriver::server	DEBUG	-> POST /session/b0d93ee3-608f-4cfa-9b12-a3e1b569db77/timeouts {"implicit": 5000}
+1691524274097	Marionette	DEBUG	0 -> [0,4,"WebDriver:SetTimeouts",{"implicit":5000}]
+1691524274098	Marionette	DEBUG	0 <- [1,4,null,{"value":null}]
+1691524274098	webdriver::server	DEBUG	<- 200 OK {"value":null}
+1691524276148	Marionette	DEBUG	Closed connection 0
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+JavaScript warning: https://a.quora.com/qevents.js, line 1: Script terminated by timeout at:
+i@https://a.quora.com/qevents.js:1:12900
+./shared/qevents/timer.js/__init__/<@https://a.quora.com/qevents.js:1:13479
+
+1691601140074	Marionette	TRACE	Received observer notification quit-application
+1691601140087	Marionette	INFO	Stopped listening on port 59491
+1691601140087	RemoteAgent	DEBUG	Resetting recommended pref apz.content_response_timeout
+1691601140088	RemoteAgent	DEBUG	Resetting recommended pref browser.contentblocking.introCount
+1691601140088	RemoteAgent	DEBUG	Resetting recommended pref browser.download.panel.shown
+1691601140088	RemoteAgent	DEBUG	Resetting recommended pref browser.newtabpage.enabled
+1691601140096	RemoteAgent	DEBUG	Resetting recommended pref browser.pagethumbnails.capturing_disabled
+1691601140097	RemoteAgent	DEBUG	Resetting recommended pref browser.search.update
+1691601140097	RemoteAgent	DEBUG	Resetting recommended pref browser.startup.couldRestoreSession.count
+1691601140097	RemoteAgent	DEBUG	Resetting recommended pref browser.tabs.closeWindowWithLastTab
+1691601140097	RemoteAgent	DEBUG	Resetting recommended pref browser.tabs.unloadOnLowMemory
+1691601140097	RemoteAgent	DEBUG	Resetting recommended pref browser.tabs.warnOnClose
+1691601140097	RemoteAgent	DEBUG	Resetting recommended pref browser.tabs.warnOnCloseOtherTabs
+1691601140098	RemoteAgent	DEBUG	Resetting recommended pref browser.tabs.warnOnOpen
+1691601140098	RemoteAgent	DEBUG	Resetting recommended pref browser.toolbars.bookmarks.visibility
+1691601140098	RemoteAgent	DEBUG	Resetting recommended pref browser.topsites.contile.enabled
+1691601140098	RemoteAgent	DEBUG	Resetting recommended pref browser.usedOnWindows10.introURL
+1691601140099	RemoteAgent	DEBUG	Resetting recommended pref browser.urlbar.merino.endpointURL
+1691601140100	RemoteAgent	DEBUG	Resetting recommended pref browser.urlbar.suggest.searches
+1691601140101	RemoteAgent	DEBUG	Resetting recommended pref datareporting.policy.dataSubmissionPolicyAccepted
+1691601140101	RemoteAgent	DEBUG	Resetting recommended pref dom.disable_open_during_load
+1691601140101	RemoteAgent	DEBUG	Resetting recommended pref dom.file.createInChild
+1691601140101	RemoteAgent	DEBUG	Resetting recommended pref dom.max_chrome_script_run_time
+1691601140101	RemoteAgent	DEBUG	Resetting recommended pref dom.max_script_run_time
+1691601140102	RemoteAgent	DEBUG	Resetting recommended pref dom.navigation.locationChangeRateLimit.count
+1691601140102	RemoteAgent	DEBUG	Resetting recommended pref dom.push.connection.enabled
+1691601140102	RemoteAgent	DEBUG	Resetting recommended pref dom.screenorientation.allow-lock
+1691601140103	RemoteAgent	DEBUG	Resetting recommended pref dom.successive_dialog_time_limit
+1691601140103	RemoteAgent	DEBUG	Resetting recommended pref extensions.getAddons.cache.enabled
+1691601140103	RemoteAgent	DEBUG	Resetting recommended pref extensions.getAddons.discovery.api_url
+1691601140103	RemoteAgent	DEBUG	Resetting recommended pref network.http.phishy-userpass-length
+1691601140103	RemoteAgent	DEBUG	Resetting recommended pref network.http.prompt-temp-redirect
+1691601140103	RemoteAgent	DEBUG	Resetting recommended pref privacy.trackingprotection.enabled
+1691601140103	RemoteAgent	DEBUG	Resetting recommended pref security.fileuri.strict_origin_policy
+1691601140154	RemoteAgent	DEBUG	Resetting recommended pref security.notification_enable_delay
+1691601140154	RemoteAgent	DEBUG	Resetting recommended pref signon.autofillForms
+1691601140156	RemoteAgent	DEBUG	Resetting recommended pref signon.rememberSignons
+1691601140156	RemoteAgent	DEBUG	Resetting recommended pref widget.windows.window_occlusion_tracking.enabled
+Dynamically enable window occlusion 1
+1691601140189	RemoteAgent	DEBUG	Resetting recommended pref dom.disable_beforeunload
+1691601140189	RemoteAgent	DEBUG	Resetting recommended pref browser.contentblocking.features.standard
+1691601140189	RemoteAgent	DEBUG	Resetting recommended pref network.cookie.cookieBehavior
+1691601140189	RemoteAgent	TRACE	Received observer notification quit-application
+1691601140199	Marionette	DEBUG	Marionette stopped listening
+1691601140213	RemoteAgent	DEBUG	Resetting recommended pref browser.contentblocking.features.standard
+1691601140213	RemoteAgent	DEBUG	Resetting recommended pref network.cookie.cookieBehavior
+[Parent 13924, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 7584, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+[Parent 13924, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 7584, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+[Parent 13924, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 7584, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+[Parent 13924, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 7584, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+[Parent 13924, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 7584, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+[Parent 13924, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 7584, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
